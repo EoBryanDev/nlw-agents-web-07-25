@@ -23,21 +23,21 @@ export function Room() {
             <Link to='/'>
               <Button variant='outline'>
                 <ArrowLeft className='mr-2 size-4' />
-                Voltar ao Início
+                Back to Home
               </Button>
             </Link>
             <Link to={`/room/${params.id}/audio`}>
               <Button className='flex items-center gap-2' variant='secondary'>
                 <Radio className='size-4' />
-                Gravar Áudio
+                Record Audio
               </Button>
             </Link>
           </div>
           <h1 className='mb-2 font-bold text-3xl text-foreground'>
-            Sala de Perguntas
+            Question's Room
           </h1>
           <p className='text-muted-foreground'>
-            Faça perguntas e receba respostas com IA
+            Room to start making questions and received AI answers
           </p>
         </div>
 
@@ -48,14 +48,14 @@ export function Room() {
         <div className='space-y-6'>
           <div className='flex items-center justify-between'>
             <h2 className='font-semibold text-2xl text-foreground'>
-              Perguntas & Respostas
+              Questions & Answers
             </h2>
           </div>
 
           <QuestionItem
             question={{
               id: "1",
-              question: "Pergunta 1",
+              question: "Question 1",
               createdAt: new Date().toISOString(),
             }}
           />
@@ -63,8 +63,8 @@ export function Room() {
           <QuestionItem
             question={{
               id: "1",
-              question: "Pergunta 2",
-              answer: "Resposta 2",
+              question: "Question 2",
+              answer: "Answer 2",
               createdAt: new Date().toISOString(),
             }}
           />
