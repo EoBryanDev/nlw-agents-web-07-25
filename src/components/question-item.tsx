@@ -4,17 +4,17 @@ import { dayjs } from "@/lib/dayjs";
 
 interface Question {
   id: string;
-  question: string;
+  questions: string;
   answer?: string | null;
   createdAt: string;
 }
 
 interface QuestionItemProps {
-  question: Question;
+  questions: Question;
 }
 
-export function QuestionItem({ question }: QuestionItemProps) {
-  const isGenerating = !question.answer;
+export function QuestionItem({ questions }: QuestionItemProps) {
+  const isGenerating = !questions.answer;
 
   return (
     <Card>
@@ -30,7 +30,7 @@ export function QuestionItem({ question }: QuestionItemProps) {
             <div className='flex-1'>
               <p className='mb-1 font-medium text-foreground'>Question</p>
               <p className='whitespace-pre-line text-muted-foreground text-sm leading-relaxed'>
-                {question.question}
+                {questions.questions}
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ export function QuestionItem({ question }: QuestionItemProps) {
                   </div>
                 ) : (
                   <p className='whitespace-pre-line text-sm leading-relaxed'>
-                    {question.answer}
+                    {questions.answer}
                   </p>
                 )}
               </div>
@@ -62,7 +62,7 @@ export function QuestionItem({ question }: QuestionItemProps) {
 
           <div className='flex justify-end'>
             <span className='text-muted-foreground text-xs'>
-              {dayjs(question.createdAt).toNow()}
+              {dayjs(questions.createdAt).toNow()}
             </span>
           </div>
         </div>
