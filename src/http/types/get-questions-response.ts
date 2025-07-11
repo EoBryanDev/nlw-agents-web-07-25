@@ -3,4 +3,5 @@ export type GetQuestionsResponse = Array<{
     questions: string
     answer: string | null
     createdAt: string
+    isGeneratingAnswer?: boolean
 }>
